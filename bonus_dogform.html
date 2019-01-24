@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Doggy Dominion</title>
+    </head>
+    <body>
+        <header>
+            <h1>Doggy Dominion</h1>
+            <img src="img/bonus_dog.jpg" alt="doggo" height="300">
+        </header>
+
+            <form method="POST" action="https://request-inspector.glitch.me/">
+                <div>
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="Enter Email Address">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="password" placeholder="Enter Password">
+                </div>
+
+
+            <h4>Name of Dog</h4>
+                <input type="text" placeholder="Dog Name">
+            <br>
+            <br>
+            <br>
+            <fieldset>
+                <legend>Male or Female?</legend>
+                <input type="radio" name="sex" value="male">Male<br>
+                <input type="radio" name="sex" value="female">Female<br>
+            </fieldset>
+            <fieldset>
+                <legend>Color of Dog</legend>
+                <label for="brown">
+                    <input id="brown" type="checkbox" name="color" value="brown">Brown
+                </label>
+                <label for="black">
+                    <input id="black" type="checkbox" name="color" value="black">Black
+                </label>
+                <label for="white">
+                    <input id="white" type="checkbox" name="color" value="white">White
+                </label>
+            </fieldset>
+            <h4>Is Your Dog Friendly?</h4>
+            <select>
+                <option disabled selected value>Select an option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <h4>Tell Us About Your Dog</h4>
+            <textarea type="post" rows="4" cols="50" placeholder="Dog Bio"></textarea>
+            <input type="hidden" name="dog_code" value="42">
+            <br>
+            <br>
+            <br>
+            <br>
+            <div>
+                <button><h4>Submit My Doggo</h4></button>
+            </div>
+            <input name="dog_facts_signup" value="true" type="checkbox" checked>Sign up for interesting dog facts!
+        </form>
+    </body>
+</html>

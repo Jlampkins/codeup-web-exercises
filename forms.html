@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Register With Us</title>
+    </head>
+    <body>
+        <header>
+            <h1>Register With Us!</h1>
+        </header>
+
+        <main>
+            <form method="POST" action="https://request-inspector.glitch.me/">
+                <div>
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="Enter email address">
+                </div>
+
+                <div>
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Enter password">
+                </div>
+
+                <div>
+                    <label for="bio">Bio</label>
+                </div>
+
+                    <div>
+                        <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Describe yourself"></textarea>
+                    </div>
+                </div>
+
+                <fieldset>
+                    <legend>How did you hear about us?</legend>
+
+                    <label for="billboard">
+                        <input id="billboard" type="checkbox" name="advertisement_type" value="billboard"> Billboard
+                    </label>
+
+                    <label for="radio">
+                        <input id="radio" type="checkbox" name="advertisement_type" value="radio"> Radio Advertisement
+                    </label>
+
+                    <label for="internet">
+                        <input id="internet" type="checkbox" name="advertisement_type" value="internet"> Internet Advertisement
+                    </label>
+
+                    <label for="other">
+                        <input id= "other" type="checkbox" name="advertisement_type" value="other"> Other
+                    </label>
+                </fieldset>
+
+                <label for="browser"> What Browser are you using?</label>
+
+                <select id="browser" name="browser">
+                    <option disabled selected value>Select an option</option>
+                    <option value="Chrome">Google Chrome</option>
+                    <option value="Safari">Safari</option>
+                    <option value="Internet Explorer">Internet Explorer</option>
+                </select>
+
+                <div>
+                    <button>Submit</button>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
