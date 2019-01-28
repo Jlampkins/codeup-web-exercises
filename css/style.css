@@ -1,0 +1,99 @@
+
+/* This is styling for welcome.html */
+h1, h2{
+    color: #874638;
+    text-decoration: #669999 underline;
+    text-shadow: #EEEE00 0 0 10px, #FF0000 5px 5px 5px;
+
+}
+
+.fancy_header {
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+}
+
+
+body {
+    background-image: url(../img/light.jpg);
+    background-color: #09386B;
+    background-size: 20em;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Baloo Thambi;
+    font-size: 1em;
+}
+
+ul {
+    list-style: url(../img/spaceboi.jpg);
+}
+
+th {
+    font-weight:bold;
+    font-size: 1em;
+    text-decoration: #669999 underline;
+    color: #ffcce6;
+    padding: 1em;
+}
+
+td, tr {
+    padding: 2px;
+    font-size: 25px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+a:visited {
+    color:#ccffff;
+}
+
+a:link {
+    color: #874638;
+    text-decoration: #669999 underline;
+    font-size:1.5em;
+    text-shadow: #EEEE00 0 0 10px, #FF0000 5px 5px 5px;
+}
+a:hover {
+    color:#ff00ff;
+}
+
+a:active {
+    color:#66ff66;
+}
+
+#logo {
+    height: 5em;
+    display: block;
+    margin: 0px auto 0px auto;
+}
+
+#slogan {
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+}
+
+#navigation {
+    list-style-type: none;
+    margin: 1em;
+    height: 3em;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    background-color: #BC2A26;
+}
+
+.nav_bar {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: left;
+}
+
+
+
+.nav_list {
+    position: absolute;
+    top: 10em;
+    right: 31em;
+}

@@ -1,0 +1,66 @@
+body {
+    background-color: #09386B;
+    font-family: Baloo Thambi;
+    font-size: 2em;
+}
+
+h1 {
+    color: #874638;
+    text-decoration: #669999 underline;
+    text-shadow: #EEEE00 0 0 10px, #FF0000 5px 5px 5px;
+    text-align: center;
+}
+
+.text_box {
+    background-color: #98D3DE;
+}
+
+.button {
+    background-color: #98D3DE;
+}
+.drop_down {
+    background-color: #98D3DE;
+}
+
+/*This section handles the checkboxes*/
+
+input[type="checkbox"] {
+    visibility: hidden;
+}
+label {
+    cursor: pointer;
+}
+input[type="checkbox"] + label:before {
+    border: 1px solid #333;
+    content: "\00a0";
+    display: inline-block;
+    font: 16px/1em sans-serif;
+    height: 24px;
+    margin: 0 .25em 0 0;
+    padding: 0;
+    vertical-align: top;
+    width: 24px;
+}
+input[type="checkbox"]:checked + label:before {
+    background: #98D3DE;
+    color: #333;
+    content: "\2713";
+    text-align: center;
+}
+input[type="checkbox"]:checked + label:after {
+    font-weight: bold;
+}
+
+input[type="checkbox"]:focus + label::before {
+    outline: rgb(59, 153, 252) auto 5px;
+}
+
+#logo {
+    height: 5em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+

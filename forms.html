@@ -3,56 +3,60 @@
     <head>
         <meta charset="UTF-8">
         <title>Register With Us</title>
+        <link rel="stylesheet" href="css/forms.css">
+        <link href="https://fonts.googleapis.com/css?family=Baloo|Baloo+Thambi" rel="stylesheet">
     </head>
     <body>
         <header>
             <h1>Register With Us!</h1>
+            <img id="logo" src="img/light.jpg">
         </header>
 
         <main>
             <form method="POST" action="https://request-inspector.glitch.me/">
                 <div>
                     <label>Email Address</label>
-                    <input type="email" name="email" placeholder="Enter email address">
+                    <input class="text_box" type="email" name="email" placeholder="Enter email address">
                 </div>
 
                 <div>
                     <label>Password</label>
-                    <input type="password" name="password" placeholder="Enter password">
+                    <input class="text_box" type="password" name="password" placeholder="Enter password">
                 </div>
 
                 <div>
                     <label for="bio">Bio</label>
-                </div>
-
                     <div>
-                        <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Describe yourself"></textarea>
+                        <textarea class="text_box" id="bio" name="bio" rows="4" cols="50" placeholder="Describe yourself"></textarea>
                     </div>
                 </div>
 
                 <fieldset>
                     <legend>How did you hear about us?</legend>
 
-                    <label for="billboard">
-                        <input id="billboard" type="checkbox" name="advertisement_type" value="billboard"> Billboard
-                    </label>
+                    <div class="content">
+                        <div class="box">
+                    <input id="billboard" type="checkbox" name="advertisement_type" value="billboard">
+                    <label for="billboard">Billboard</label>
 
-                    <label for="radio">
-                        <input id="radio" type="checkbox" name="advertisement_type" value="radio"> Radio Advertisement
-                    </label>
+                    <input class="check_box" id="radio" type="checkbox" name="advertisement_type" value="radio">
+                    <label for="radio">Radio Advertisement</label>
 
-                    <label for="internet">
-                        <input id="internet" type="checkbox" name="advertisement_type" value="internet"> Internet Advertisement
-                    </label>
+                    <input class="check_box" id="internet" type="checkbox" name="advertisement_type" value="internet">
+                    <label for="internet">Internet Advertisement</label>
 
-                    <label for="other">
-                        <input id= "other" type="checkbox" name="advertisement_type" value="other"> Other
-                    </label>
+                    <input class="check_box" id="other" type="checkbox" name="advertisement_type" value="other">
+                    <label for="other">Other</label>
+
+                        </div>
+                    </div>
                 </fieldset>
 
+                <div>
                 <label for="browser"> What Browser are you using?</label>
+                </div>
 
-                <select id="browser" name="browser">
+                <select class="drop_down" id="browser" name="browser">
                     <option disabled selected value>Select an option</option>
                     <option value="Chrome">Google Chrome</option>
                     <option value="Safari">Safari</option>
@@ -60,7 +64,7 @@
                 </select>
 
                 <div>
-                    <button>Submit</button>
+                    <button class="button">Submit</button>
                 </div>
             </form>
         </main>
