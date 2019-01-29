@@ -27,13 +27,13 @@ a {
 }
 
 .container {
-    margin: 2em;
+    margin-top: 2em;
 }
 
 .media {
     width: 100%;
     background-color: var(--light-bg);
-    border-bottom: 1px var(--separator-color);
+    border-bottom: 1px solid var(--separator-color);
     padding: .5em;
     overflow: auto;
 }
@@ -90,11 +90,12 @@ a {
 
 .profile-image {
     position: absolute;
-    top: 230px;
+    top: 244px;
 }
 
 .profile-items {
-    list-style-type: none
+    list-style-type: none;
+    padding: 0em;
 }
 
 .profile-details {
@@ -107,7 +108,6 @@ a {
     float: left;
     margin: 0em .5em;
     width: calc(50% - 1em);
-
 }
 
 .who-to-follow {
