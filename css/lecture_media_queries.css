@@ -1,0 +1,49 @@
+/*mobile devices*/
+body {
+    background-color: red;
+}
+
+li {
+    display: none;
+    list-style: none;
+}
+
+h1 {
+    font-size: 1em;
+}
+
+button {
+    float: right;
+}
+
+
+/*tablet*/
+@media screen and (min-width: 768px){
+    body {
+        background-color: yellow;
+    }
+    li {
+        display: inline;
+    }
+
+    h1 {
+        font-size: 5em;
+    }
+}
+/*small desktops/laptops/large-tablet*/
+@media screen and (min-width: 992px) and (max-width: 1300px){
+    body{
+        background-color: lightgrey;
+    }
+    li {
+        display: none;
+    }
+
+}
+/*TV*/
+@media screen and (min-width: 1200px) {
+    body{
+        background-color: green;
+    }
+
+}

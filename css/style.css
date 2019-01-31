@@ -74,6 +74,7 @@ a:active {
 
 #navigation {
     list-style-type: none;
+    width: 100%;
     margin: 1em;
     height: 3em;
     width: 100%;
@@ -83,7 +84,8 @@ a:active {
 }
 
 .nav_bar {
-    display: block;
+    display: inline-block;
+    position: fixed;
     color: white;
     padding: 14px 16px;
     text-decoration: none;
