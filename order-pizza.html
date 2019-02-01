@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pizza Planetoid</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/order-pizza.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    </head>
+    <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!--Pizza Place-->
+        <a class="navbar-brand" href="#">Pizza Planetoid</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--Links-->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Order Online <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Menu</a>
+                </li>
+                <li class="nav-item">
+                </li>
+
+                <!--Search Bar-->
+                <form class="form-inline">
+                    <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
+                    <button class="btn btn-sm btn-outline-secondary my-2 my-sm-0" type="submit">Search stores near you!</button>
+                </form>
+
+            </ul>
+            <!--sign-up button-->
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link text-dark" href="#">
+                        <i class="fas fa-user"></i>
+                            Sign Up
+                    </a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+        <!--is extra-small the same as small and small is medium?-->
+    <header class="container d-none d-sm-block">
+        <!--Pizza Image-->
+        <div class="jumbotron jumbotron-fluid pizza-image">
+            <h1 class="text-center">Welcome to Pizza Planetoid</h1>
+        </div>
+    </header>
+
+    <!--Tab Options-->
+    <main class="container">
+        <h2 class="build-pizza">Build your own pizza!</h2>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+               <a class="nav-link active pizza-options" href="#"><span class="badge badge-pill badge-secondary">1</span> Size and Crust</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link pizza-options" href="#"><span class="badge badge-pill badge-secondary">2</span> Cheese and Sauce</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link pizza-options" href="#"><span class="badge badge-pill badge-secondary">3</span> Toppings</a>
+            </li>
+        </ul>
+        <div class="tabs"></div>
+
+        <!--cards-->
+        <div class="card">
+            <div class="card-body bg-primary text-white rounded mb-4 pt-2 pb-2 choose-crust-option">
+                Choose size and crust
+            </div>
+
+            <div class="card ml-4 mr-4">
+                <div class="card-header">
+                Hand Tossed
+                </div>
+                <div class="card-body">
+                <p class="card-text">Garlic seasoned crust with a rich, buttery taste</p>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+.pizza-image {
+    background-image: url("../img/pizza_planet.png");
+}
+
+.pizza-image h1 {
+    background: rgba(255, 255, 255, 0.7);
+    font-weight: normal;
+
+}
+
+.pizza-options {
+    font-size: 12px;
+
+}
+
+.build-pizza {
+    font-weight: normal;
+    font-size: 28px;
+}
+
+.choose-crust-option {
+    font-size: 12px;
+}
