@@ -7,7 +7,7 @@
      * 'names'.
      */
 
-    var names = ["Adrien", "Jeremy", "Bethany", "James"];
+    // var names = ["Adrien", "Jeremy", "Bethany", "James"];
 
     /**
      * TODO:
@@ -101,34 +101,55 @@
 
 
 
-function randomDay(){
-        var daysOfWeek = [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"
-        ];
-    var day = daysOfWeek[Math.floor(Math.random()* daysOfWeek.length)];
-    console.log(day);
-}
-randomDay();
+// function randomDay(){
+//         var daysOfWeek = [
+//             "Monday",
+//             "Tuesday",
+//             "Wednesday",
+//             "Thursday",
+//             "Friday",
+//             "Saturday",
+//             "Sunday"
+//         ];
+//     var day = daysOfWeek[Math.floor(Math.random()* daysOfWeek.length)];
+//     console.log(day);
+// }
+// randomDay();
 
     /**3.	Create a function that takes a single letter and returns what number the
     letter is in the alphabet. Ignore case.**/
-    function letterNumber(letter) {
-        var alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-
-        for(var x = 0; x < alpha.length; x++) {
-            return letter[x]
-        }
-    }
+    // function letterNumber(letter) {
+    //     var alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    //
+    //     for(var x = 0; x < alpha.length; x++) {
+    //         return letter[x]
+    //     }
+    // }
 
     /** 4.	Create a function that returns the longest string in a given array of
     string elements.**/
 
+    // function longest();
+
      /**5.	 Create a function that takes in two arrays of elements, including numbers. If all numbers added together in the first array is equal to all the number inputs added in the second array, return true, otherwise, false. Only add together numeric elements but either array may contain non-numeric elements.**/
+
+     /** 6.	Write a function that returns the sum of an array of numbers**/
+
+
+
+         var arrayNum = [1, 2, 3, 4, 5, 6, 7].reduce(add, 0);
+         function add(a, b){
+             return a + b;
+         }
+
+
+    console.log(arrayNum);
+
+     /**7.	Create a student roster management app. Using the user dialogue functions (alert, confirm, prompt), create an application that will prompt the user to choose from a menu with the following actions:
+        1) add a student
+    2) delete a student
+    3) view all students in alphabetical order
+    4) view all students in reverse alphabetical**/
+
 
 })();
