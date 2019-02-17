@@ -83,28 +83,33 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
-    // var books = [
-    //     {title: "Illium",
-    //         author:
-    //             {firstName: "Dan", lastName: "Simmons"}
-    //             },
-    //     {title: "Flash Forward",
-    //         author:
-    //             {firstName: "Robert", lastName: "Sawyer"}
-    //             },
-    //     {title: "Fall of Giants",
-    //         author:
-    //             {firstName: "Ken" lastName: "Foilet"}
-    //             },
-    //     {title: "The Dark Tower",
-    //         author:
-    //             {firstName: "Stephen", lastName: "King"}
-    //             },
-    //     {title: "End of Eternity",
-    //         author:
-    //             {firstName: "Isaac", lastName: "Asimov"}
-    //             },
-    //
+    var books = [
+        {title: "book title",
+            author:
+                {firstName: "john", lastName: "doe", fullName: "john doe"}
+                },
+        {title: "illium",
+            author:
+                {firstName: "dan", lastName: "simmons", fullName: "dan simmons"}
+                },
+        {title: "flash forward",
+            author:
+                {firstName: "robert", lastName: "sawyer", fullName: "robert Sawyer"}
+                },
+        {title: "fall of giants",
+            author:
+                {firstName: "ken", lastName: "foilet", fullName: "ken foilet"}
+                },
+        {title: "the dark tower",
+            author:
+                {firstName: "stephen", lastName: "king", fullName: "stephen King"}
+                },
+        {title: "end of eternity",
+            author:
+                {firstName: "isaac", lastName: "Asimov", fullName: "isaac asimov"}
+                }
+        ];
+
 
 
 
@@ -132,7 +137,9 @@
      *      ---
      *      ...
      */
-    // book.forEach(function(element, index));
+    // books.forEach(function(element, index){
+    //     console.log("Book #" + index + "\n" + "Title: " + element.title + "\n" + "Author: " + element.author.firstName + " " + element.author.lastName);
+    // });
 
 
     /**
@@ -145,5 +152,39 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    function showBookInfo(input){
+        var search = input.toLowerCase();
+        books.forEach(function(element){
+            if(search === element.title || search === element.author.lastName || search === element.author.firstName || search === element.author.fullName){
+                console.log(element);
+            }
+        });
+    } showBookInfo("Dan");
+    // how do code it to accept both the first and last name in one entry
+
+
+    var book = [
+            {title: "Book Title",
+                author:
+                    {firstName: "John", lastName: "Doe", fullName: "John Doe"}
+        }
+
+    ];
+
+
+  function createBook(title, authorFirst, authorLast, authorFull){
+      book.push({title: title, author: {firstName: authorFirst, lastName: authorLast, fullName: authorFull}})
+      }
+
+
+    createBook("Illium", "Dan", "Simmons", "Dan Simmons");
+    createBook("Flash Forward", "Robert", "Sawyer", "Robert Sawyer");
+    createBook("Fall of Giants", "Ken", "Foilet", "Ken Foilet");
+    createBook("The Dark Tower", "Stephen", "King", "Stephen King");
+    createBook("End of Eternity", "Isaac", "Asimov", "Isaac Asimov");
+
+  console.log(book);
+
 
 })();
