@@ -14,7 +14,10 @@
 
     var person = {
         firstName: "James",
-        lastName: "Lampkins"
+        lastName: "Lampkins",
+        sayHello: function() {
+            return "Hello.  My name is " + this.firstName + " " + this.lastName + "!";
+        }
     };
 
 
@@ -29,10 +32,10 @@
      */
 
     person.sayHello = function(){
-        console.log("Hello, " + person.firstName +" " + person.lastName + "!");
+        return "Hello from " + person.firstName +" " + person.lastName + "!";
     };  /** maybe use this.firstName and this.lastName" **/
 
-    person.sayHello();
+    console.log(person.sayHello());
 
 
     /** TODO:
@@ -52,7 +55,8 @@
     var shoppers = [
         {name: 'Cameron', amount: 180},
         {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
+        {name: 'George', amount: 320},
+        {name: "Goofy", amount: 400}
     ];
     // function discountAmount() {
     //     if (shoppers.amount > 200) {
@@ -60,12 +64,13 @@
     //     }
     // }
 
-    shoppers.forEach(function(element){
-        var beforeAmount = element.amount;
-        if (element.amount > 200) {
-            element.amount = element.amount - (element.amount * .12);
+    shoppers.forEach(function(shopper){
+        var beforeAmount = shopper.amount;
+        if (shopper.amount > 200) {
+            var discount = shopper.amount * .12;
+            shopper.amount = shopper.amount - (shopper.amount * .12);
         }
-        console.log(element.name + "'s total comes to: $" + beforeAmount + " after the discount, the total is: $" + element.amount);
+        console.log(shopper.name + "'s total comes to: $" + beforeAmount + ". The discount savings came to " + "$" + discount + ". " + "After the discount, the total is: $" + shopper.amount);
     });
 
 
@@ -84,10 +89,6 @@
      */
 
     var books = [
-        {title: "book title",
-            author:
-                {firstName: "john", lastName: "doe", fullName: "john doe"}
-                },
         {title: "illium",
             author:
                 {firstName: "dan", lastName: "simmons", fullName: "dan simmons"}
@@ -137,9 +138,9 @@
      *      ---
      *      ...
      */
-    // books.forEach(function(element, index){
-    //     console.log("Book #" + index + "\n" + "Title: " + element.title + "\n" + "Author: " + element.author.firstName + " " + element.author.lastName);
-    // });
+    books.forEach(function(book, index){
+        console.log("Book #" + (index + 1) + "\n" + "Title: " + book.title + "\n" + "Author: " + book.author.firstName + " " + book.author.lastName + "\n" + "---");
+    });
 
 
     /**
@@ -148,6 +149,7 @@
      *   name and returns a book object with the properties described
      *   previously. Refactor your code that creates the books array to instead
      *   use your function.
+     *
      * - Create a function named `showBookInfo` that accepts a book object and
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
@@ -161,30 +163,43 @@
             }
         });
     } showBookInfo("Dan");
+
+
     // how do code it to accept both the first and last name in one entry
 
 
-    var book = [
-            {title: "Book Title",
-                author:
-                    {firstName: "John", lastName: "Doe", fullName: "John Doe"}
-        }
+  //   var book = [
+  //           {title: "Book Title",
+  //               author:
+  //                   {firstName: "John", lastName: "Doe", fullName: "John Doe"}
+  //       }
+  //
+  //   ];
+  //
+  //
+  // function createBook(title, authorFirst, authorLast, authorFull){
+  //     book.push({title: title, author: {firstName: authorFirst, lastName: authorLast, fullName: authorFull}});
+  //     }
 
-    ];
 
-
-  function createBook(title, authorFirst, authorLast, authorFull){
-      book.push({title: title, author: {firstName: authorFirst, lastName: authorLast, fullName: authorFull}})
-      }
-
-
-    createBook("Illium", "Dan", "Simmons", "Dan Simmons");
-    createBook("Flash Forward", "Robert", "Sawyer", "Robert Sawyer");
-    createBook("Fall of Giants", "Ken", "Foilet", "Ken Foilet");
-    createBook("The Dark Tower", "Stephen", "King", "Stephen King");
-    createBook("End of Eternity", "Isaac", "Asimov", "Isaac Asimov");
-
-  console.log(book);
+  //     function createBook(title, authorFirst, authorLast, authorFull){
+  //       var book = {};
+  //       book.title = title;
+  //       book.author = {};
+  //       book.author.firstName = authorFirst;
+  //       book.author.lastName = authorLast;
+  //       book.author.fullName = authorFull;
+  //       return
+  //     };
+  //
+  //
+  //   createBook("Illium", "Dan", "Simmons", "Dan Simmons");
+  //   createBook("Flash Forward", "Robert", "Sawyer", "Robert Sawyer");
+  //   createBook("Fall of Giants", "Ken", "Foilet", "Ken Foilet");
+  //   createBook("The Dark Tower", "Stephen", "King", "Stephen King");
+  //   createBook("End of Eternity", "Isaac", "Asimov", "Isaac Asimov");
+  //
+  // console.log(book);
 
 
 })();

@@ -85,6 +85,7 @@
     shape is found
 –	once the shape is found, log a message (“Shape is found”) and use a break
     statement to exit loop.**/
+            /** COMPLETED **/
 
     // var shapes = ["circle", "square", "triangle", "rectangle"];
     // var answer = prompt("What shape do you wanna find?");
@@ -98,7 +99,7 @@
     // }
 
     /**2.	Create a function that returns a random day of the week**/
-
+    /** COMPLETED **/
 
 
 // function randomDay(){
@@ -118,38 +119,80 @@
 
     /**3.	Create a function that takes a single letter and returns what number the
     letter is in the alphabet. Ignore case.**/
-    // function letterNumber(letter) {
-    //     var alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+        /** COMPLETED **/
+    // var alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     //
+    // function letterNumber(letter) {
+    //     var letterLower = letter = letter.toLowerCase();
     //     for(var x = 0; x < alpha.length; x++) {
-    //         return letter[x]
+    //         if(letter === letter[x]){
+    //         // console.log(alpha.indexOf(letter));
+    //         return alpha.indexOf(letter);
+    //         }
     //     }
     // }
+    // console.log(letterNumber("B"));
+
 
     /** 4.	Create a function that returns the longest string in a given array of
     string elements.**/
+    // var stringArray = ["james", "jeremy", "bethany", "adrienne"];
+    //
+    //     var a = stringArray[0];
+    //     var b = stringArray[1];
+    //     var c = stringArray[2];
+    //     var d = stringArray[3];
+    //
+    //
+    // function longest(){
+    //     for(var x = 0; x < stringArray.length; x++);
+    //     if(a.length >= b.length && a.length >= c.length && a.length >= d.length){
+    //         return a;
+    //     }else if(b.length >= c.length && b.length >= d.length && b.length >= a.length){
+    //         return b;
+    //     }else if(c.length >= d.length && c.length >= a.length && c.length >= b.length){
+    //         return c;
+    //     }else if(d.length >= a.length && d.length >= b.length && d.length >= c.length){
+    //         return d;
+    //     }
+    // }
+    // console.log(longest(stringArray));
 
-    // function longest();
 
      /**5.	 Create a function that takes in two arrays of elements, including numbers. If all numbers added together in the first array is equal to all the number inputs added in the second array, return true, otherwise, false. Only add together numeric elements but either array may contain non-numeric elements.**/
 
      /** 6.	Write a function that returns the sum of an array of numbers**/
+            /** COMPLETED **/
 
 
+    //      var arrayNum = [1, 2, 3, 4, 5, 6, 7].reduce(add, 0);
+    //      function add(a, b){
+    //          return a + b;
+    //      }
+    //
+    //
+    // console.log(arrayNum);
 
-         var arrayNum = [1, 2, 3, 4, 5, 6, 7].reduce(add, 0);
-         function add(a, b){
-             return a + b;
-         }
 
+            /**  4.  Create a function that returns the longest string in a given array of string elements. **/
 
-    console.log(arrayNum);
+            function longestString() {
+                var strings = ['this is a string', 'this is another string', 'this is a string that will most likely be the longest string in this array', 'this is yet another string'];
+                var longest = strings.sort(function(a, b) {
+                    return b.length - a.length;
+                })[0];
+
+                return longest;
+            }
+    console.log(longestString());
 
      /**7.	Create a student roster management app. Using the user dialogue functions (alert, confirm, prompt), create an application that will prompt the user to choose from a menu with the following actions:
         1) add a student
     2) delete a student
     3) view all students in alphabetical order
     4) view all students in reverse alphabetical**/
+
+
 
 
 })();
