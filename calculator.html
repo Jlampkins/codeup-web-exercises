@@ -1,12 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Calculate</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link src ="js/calculator.js">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculate</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href ="css/calculator.css">
 
-</body>
+    </head>
+    <body>
+        <div class="container">
+            <div class="calc-bod">
+            <div class="row">
+                <input  id="firstNum" type="text" value="">
+                <input  id="secondNum" type="text" value="">
+                <input  id="thirdNum" type="text" value="">
+            </div> <!-- end of row -->
+            <div class="row">
+                <input id="clear"  type="button" value="C">
+                <input id="negative"  type="button" value="+/-">
+                <input id="percent"  type="button" value="%">
+                <input id="divide" class="operand"  type="button" value="/">
+            </div>
+            <div class="row">
+                <input id="one" class="numbers" type="button" value="1">
+                <input id="two" class="numbers" type="button" value="2">
+                <input id="three" class="numbers" type="button" value="3">
+                <input id="plus" class="operand"  type="button" value="+">
+            </div><!-- end of row -->
+            <div class="row">
+                <input id="four" class="numbers" type="button" value="4">
+                <input id="five" class="numbers" type="button" value="5">
+                <input id="six" class="numbers" type="button" value="6">
+                <input id="minus" class="operand"  type="button" value="-">
+            </div><!-- end of row -->
+            <div class="row">
+                <input id="seven" class="numbers" type="button" value="7">
+                <input id="eight" class="numbers" type="button" value="8">
+                <input id="nine" class="numbers" type="button" value="9">
+                <input id="multi" class="operand"  type="button" value="*">
+            </div><!-- end of row -->
+            <div class="row">
+                <input id="zero" class="numbers" type="button" value="0">
+                <input id="deci"  type="button" value=".">
+                <input id="equal"  type="button" value="=">
+            </div><!-- end of row -->
+
+
+            </div> <!--Cal Bod -->
+
+
+
+
+        </div>
+
+
+
+        <script src ="js/calculator.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    </body>
 </html>
