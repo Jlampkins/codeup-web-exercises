@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox 2</title>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        #map{
+            width: 100%;
+            height: 400px;
+        }
+
+    </style>
+</head>
+<body>
+<div id='map'></div>
+
+
+
+
+
+
+<script src="js/keys.js"></script>
+<script>
+    mapboxgl.accessToken = practiceToken;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 11,
+        center: [-77.0369, 38.9072]
+    });
+
+    var marker = new mapboxgl.Marker();
+    marker.setLngLat([-77.0502, 38.8893]);
+    marker.addTo(map);
+    marker.setDraggable(true);
+
+    var delay = 5000;
+    setTimeout(function(){
+        map.setZoom(13);
+        map.setCenter([-77.0502, 38.8893]);
+    }, delay);
+
+
+    // var alamoPopup = new mapboxgl.Popup()
+    //     // .setLngLat([-98.4916, 29.4252])
+    //     .setHTML("<h2>Remember!?</h2>")
+    //     .addTo(map);
+    //     marker.SetPopup(alamoPopup);
+
+
+    // var popup = new mapboxgl.Popup()
+    // .setLngLat([-98.4916, 29.4252])
+    // .setHTML("<h1>Remember?</h1>")
+    //     .addTo(map);
+
+
+</script>
+
+</body>
+</html>

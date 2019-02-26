@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MapBox Exercise</title>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+<body>
+<div id='map' style='width: 100%; height: 600px;'></div>
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="js/practice-geocode.js"></script>
+<script src="js/keys.js"></script>
+<script>
+    mapboxgl.accessToken = practiceToken;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 9,
+        center: [-98.4936, 29.4241]
+    });
+
+
+    var restaurants = [{
+        name: "Hop Doddy",
+        address: "17623 La Cantera Pkwy #101, San Antonio, TX 78257",
+        phone: "(210) 434-2337",
+        type: "Burgers"
+    },
+    {
+        name: "Luby's Cafeteria",
+        address: "9251 Floyd Curl Dr, San Antonio, TX 78240",
+        phone: "(210) 699-6652",
+        type: "Cafeteria"
+    },
+    {
+        name: "PHO BO",
+        address: "124 Broadway St, San Antonio, TX 78205",
+        phone: "(210) 314-1781",
+        type: "Thai"
+    }];
+
+    restaurants.forEach(function(restaurant){
+        geocode(restaurant.address, practiceToken).then(function(data){
+            var marker = new mapboxgl.Marker();
+            marker.setLngLat(data);
+            marker.addTo(map);
+
+            var hopPopup = new mapboxgl.Popup()
+                .setHTML("<h2>" + restaurant.name + "</h2>" + "<h3>" + restaurant.address + "</h3>" + "<h4>" + restaurant.phone + "</h4>" + "<h5>" + restaurant.type + "</h5>" );
+            marker.setPopup(hopPopup)
+        });
+
+    });
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
