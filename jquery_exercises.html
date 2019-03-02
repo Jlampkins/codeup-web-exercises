@@ -3,20 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <title>jQuery Exercise</title>
+
+    <style>
+        .header{
+            background-color: forestgreen;
+        }
+        h1{
+            display: inline-block;
+        }
+
+        .para {
+            font-size: 24px;
+        }
+
+
+
+    </style>
 </head>
 <body>
+
+<h1 id="title"> jQuery is doing the work!</h1>
+<p>The fun is just beginning when you are using jQuery! Let's list the ways that makes it fun!</p>
+
+<ul id="list">
+    <li class="reasons">You can use the dollar sign!</li>
+    <li class="reasons">Mo Money Mo Problems</li>
+    <li class="reasons">You add more links to your script!</li>
+</ul>
 
 
 
 <script src="js/jquery-3.3.1.js"></script>
-<!--<script-->
-        <!--src="http://code.jquery.com/jquery-3.3.1.js"-->
+<!--<script src="http://code.jquery.com/jquery-3.3.1.js"-->
         <!--integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="-->
         <!--crossorigin="anonymous"></script>-->
-<script>
+
+
+<script> //all code in this document ready function
+        //document is the default $() = document
+
     $(document).ready(function() {
-        alert("The document has loaded!");
+        "use strict";
+
+// $("h1").click(function(e){
+//     console.log(e); //clicking this on the page will show info on it in the console.
+// });
+
+        /** SAVE THIS **/
+        $("h1").click(function() {
+            $(this).toggleClass("header");
+        });
+
+        $("p").click(function(){
+            $(this).toggleClass("para");
+        });
+
+
+        function turnGreen(){
+            $("h1").css("background", "forestgreen")
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // $("h1").on("click", function(){
+        //     $(this).css("background", "forestgreen");
+        // });
+        //
+        //     $(this).off("click", "h1", function(){
+        //
+        //     });
+
+
+        // $("p").dblclick(function(){
+        //     $(this).css("font-size", "24px");
+        // });
+
+
+        /** red to black hover **/
+        $("li").hover(function(){
+            $(this).css("color", "red");
+        },                               //THIS is isolating each individual element
+            function(){
+            $(this).css("color", "black");
+            }
+
+        );
+
+
+
+
+        /** Exercise One **/
+        // var contents = $("#title").html();
+        // alert(contents);
+        //
+        // var contents2 = $("#list").text();
+        // alert(contents2);
+        //
+        // $(".reasons")
+        //     .css("border", "1px solid red");
+        //
+        // $("li")
+        //     .css("font-size", "20px");
+        // $("h1, p, li")
+        //     .css("background-color", "yellow")
+        //     .css("color", "blue");
+        // var contents3 = $("h1").html();
+        // alert(contents3)
+
     });
+
 </script>
 
 </body>
