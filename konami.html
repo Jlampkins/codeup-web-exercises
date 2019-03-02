@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+
+
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+    "use strict";
+
+
+
+function konami() {
+    var secretCode = "";
+    var konamiCode = "3838404037393739666513";
+
+    $(document).on("keydown", function (e) {
+        secretCode = secretCode + ("" + e.keyCode);
+        if (secretCode === konamiCode) {
+            $("body").css("background-image", "url(img/qTmO9Q.gif)");
+        }
+        if (!konamiCode.indexOf(secretCode)) return;
+        secretCode = ("" + e.keyCode);
+
+    });
+}
+
+
+konami()
+
+
+
+        // $(document).on("keydown", function(e){
+        //     if (e.which === konamiCode[codePosition]){
+        //         userCode.push(e.which);
+        //         console.log(userCode);
+        //         codePosition++;
+        //     }else if(e.which === konamiCode[codePosition]){
+        //         userCode.push(e.which);
+        //         codePosition++;
+        //     }else if(e.which === konamiCode[codePosition]) {
+        //         userCode.push(e.which);
+        //         codePosition++;
+        //     }else if (e.which === konamiCode[codePosition]) {
+        //         userCode.push(e.which);
+        //         codePosition++;
+        //     }else if (e.which === konamiCode[codePosition]) {
+        //         userCode.push(e.which);
+        //         codePosition++;
+        //     }else if (e.which === konamiCode[codePosition]) {
+        //         userCode.push(e.which);
+        //         codePosition++;
+        //     }else if (e.which === konamiCode[codePosition]) {
+        //         userCode.push(e.which);
+        //         codePosition++;
+        //     }else if (e.which === konamiCode[codePosition]) {
+        //         userCode.push(e.which);
+        //         codePosition++;
+        //     }else if (e.which === konamiCode[codePosition]) {
+        //         userCode.push(e.which);
+        //         codePosition++;
+        //     } else if (e.which === konamiCode[codePosition]) {
+        //         userCode.push(e.which);
+        //         codePosition++;
+        //     } else if (e.which === konamiCode[codePosition]) {
+        //         userCode.push(e.which);
+        //         codePosition++;
+        //     }else {
+        //         codePosition = 0;
+        //     }
+        //
+        //     if( userCode.length === konamiCode.length){
+        //         $("body").css("background-image", "url(img/qTmO9Q.gif)");
+        //     }
+        // });
+
+
+
+
+
+
+
+    // var secretCode = {
+    //     37: 'left',
+    //     38: 'up',
+    //     39: 'right',
+    //     40: 'down',
+    //     65: 'a',
+    //     66: 'b',
+    //     13: "enter"
+    // };
+    // var konamiCode = ["up", "up", "down", "down", "left", "right", "left", "right", "b", "a", "enter"];
+    // var konamiCodePosition = 0;
+    //
+    // $(document).on('keydown', function(e) {
+    //     var key = secretCode[e.which];
+    //     // get the value of the required key from the konami code
+    //     var requiredKey = konamiCode[konamiCodePosition];
+    //     // compare the key with the required key
+    //     if (key == requiredKey) {
+    //         // move to the next key in the konami code sequence
+    //         konamiCodePosition++;
+    //
+    //     }
+    // });
+
+</script>
+</body>
+</html>
+
+
+
+
