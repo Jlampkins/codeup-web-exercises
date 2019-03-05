@@ -220,7 +220,7 @@
         });
 
 
-
+        /** individual park pics **/
         $("#zion-pic").hide();
         $("#zion").on("click",function(){
             $("#zion-pic, .park-embl").slideToggle();
@@ -254,7 +254,39 @@
         }
         $(this).attr('src', src);
 
-        })
+        });
+
+
+
+
+
+        /** SECRET BEAR **/
+        function smokeyBear() {
+            var secretCode = "";
+            var konamiCode = "837779756989";
+
+            $(document).on("keydown", function (e) {
+                secretCode = secretCode + ("" + e.keyCode);
+                if (secretCode === konamiCode) {
+                    $(".container").hide();
+                    $("body")
+                        .css("background-image", "url(img/dancingbear.gif), url(img/fire.gif")
+                        .css("background-repeat", "no-repeat")
+                        .css("text-align", "center").html("<h2>Only YOU can prevent forest fires!</h2>")
+                }
+                if (!konamiCode.indexOf(secretCode)) return;
+                secretCode = ("" + e.keyCode);
+
+            });
+
+            $(document).keyup(function(event){
+                console.log(event.keyCode);
+            });
+        }
+
+
+
+        smokeyBear()
 
 
 
