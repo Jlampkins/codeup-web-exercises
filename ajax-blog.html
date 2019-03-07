@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <title>Title</title>
+
+
+        <style>
+
+            #background {
+                background: rgba(256, 256, 256, 0.4);
+
+            }
+
+
+            textarea::placeholder {
+                text-align: center;
+
+            }
+
+            #input-post::placeholder{
+                padding-top: 3em;
+            }
+
+            .bg{
+
+
+                background-repeat: no-repeat;
+                background-size: cover;
+
+            }
+
+
+            #post-btn{
+                background: rgba(256,256,256,0.3);
+                width: 100%;
+            }
+            #input-title{
+                margin-top: 1.5em;
+                height: 1.5em;
+                width: 15em;
+                resize: none;
+                background: rgba(256,256,256,0.4);
+            }
+
+            #input-post{
+                height: 8em;
+                resize: none;
+                background: rgba(256,256,256,0.4);
+            }
+
+            #input-cat{
+                height: 1.5em;
+                width: 9em;
+                resize: none;
+                background: rgba(256,256,256,0.4);
+            }
+            .title-post{
+                margin-top: 2em;
+            }
+
+
+            .date{
+                font-weight: bold;
+            }
+
+
+
+        </style>
+    </head>
+    <body class="bg">
+    <div id="background" class ="container">
+
+        <!--post information posts here-->
+        <div id="posts"></div>
+        <!--input for  title-->
+        <textarea placeholder="title" id="input-title" class=""></textarea>
+        <textarea placeholder="key words" id="input-cat"></textarea>
+        <!--input for post-->
+        <textarea placeholder="tell me about it" id="input-post" class="col post"></textarea>
+        <!--button to post-->
+        <button id="post-btn"> Post!!! </button>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+        <script src= "js/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+        <script>
+            "use script";
+$(document).ready(function(){
+            $.ajax("data/blog.json").done(function(data){
+                for (var i = 0; i < data.length; i++) {
+
+                    $("#posts").append("<div class='title-json'><h1>" + data[i].title + "</h1></div>"
+                                            + "<div class='date'>" + data[i].date + "</div><hr>"
+                                            + "<div class='blog-json'>" + data[i].content + "</div>"
+                                            + "<div class= 'cat-json'><a href='#'>" + data[i].categories.join(", ")  + "</a></div>")
+
+                }
+                // hideJson();
+            });
+
+            $('#post-btn').click(function() {
+                var blogPost = $('#input-post').val();
+                var blogTitle = $("#input-title").val();
+                var blogCat = $("#input-cat").val();
+                var today = new Date();
+                $("#posts").append("<div class='title-post'><h1>" + blogTitle + "</h1></div>");
+                $("#posts").append("<div class='date'>" + today.toDateString() + "</div><hr>");
+                $('#posts').append("<div class='blog-post'>" + blogPost + "</div>");
+                $("#posts").append("<div><a href='#'>" + blogCat + "</div>");
+                $("#input-title, #input-post, #input-cat").val("");
+
+                // hidePost();
+            });
+
+
+
+
+
+
+
+            function hidePost(){
+                $(".blog-post, .categories").hide();
+                $(".title-post").on("click", function () {
+                    $(this).next().next().next().slideToggle();
+                    $(this).next().next().next().next().slideToggle();
+
+                })
+            }
+
+            function hideJson(){
+                $(".blog-json, .cat-json").hide();
+                $(".title-json").on("click", function () {
+                    $(this).next().next().next().slideToggle();
+                    $(this).next().next().next().next().slideToggle();
+
+                })
+            }
+
+
+            /** gets the time **/
+    var currentTime = new Date();
+    console.log(currentTime.toTimeString());
+
+/** conditional to verify time of day to set the background **/
+    var src;
+    var time = currentTime.toTimeString();
+    if (time >= "09:00:00" && time < "12:00:00"){
+        src = "url(img/blogtimebackground/morning.png)"
+    } else if(time >= "12:00:00" && time < "15:00:00"){
+        src = "url(img/blogtimebackground/latemorning.png)"
+    }else if(time >= "15:00:00" && time < "18:00:00"){
+        src = "url(img/blogtimebackground/afternoon.png)"
+    }else if(time >= "18:00:00" && time < "21:00:00"){
+        src = "url(img/blogtimebackground/lateafternoon.png)"
+    }else if(time >= "21:00:00" || time === "23:59:59") {
+        src = "url(img/blogtimebackground/evening.png)"
+    }else if(time >= "00:00:00" && time < "03:00:00"){
+        src = "url(img/blogtimebackground/lateevening.png)"
+    }else if(time >= "03:00:00" && time < "06:00:00"){
+        src = "url(img/blogtimebackground/night.png)"
+    }else if(time >= "06:00:00" && time < "09:00:00"){
+        src = "url(img/blogtimebackground/latenight.png)"
+    }
+
+    $(".bg").css("background-image", src);
+
+
+
+    function timeWarp() {
+        var secretCode = "";
+        var konamiCode = "8473776987658280";
+        $(document).on("keydown", function (e) {
+            secretCode = secretCode + ("" + e.keyCode);
+            if (secretCode === konamiCode) {
+                setTimeout(function(){
+                $("body").css("background-image", "url(img/blogtimebackground/morning.png)");
+                }, 1000);
+                setTimeout(function() {
+                    $("body").css("background-image", "url(img/blogtimebackground/latemorning.png)");
+                }, 2000);
+                setTimeout(function() {
+                    $("body").css("background-image", "url(img/blogtimebackground/afternoon.png)");
+                }, 3000);
+                setTimeout(function() {
+                    $("body").css("background-image", "url(img/blogtimebackground/lateafternoon.png)");
+                }, 4000);
+                setTimeout(function() {
+                    $("body").css("background-image", "url(img/blogtimebackground/evening.png)");
+                }, 5000);
+                setTimeout(function() {
+                    $("body").css("background-image", "url(img/blogtimebackground/lateevening.png)");
+                }, 6000);
+                setTimeout(function() {
+                    $("body").css("background-image", "url(img/blogtimebackground/night.png)");
+                }, 7000);
+                setTimeout(function() {
+                    $("body").css("background-image", "url(img/blogtimebackground/latenight.png)");
+                }, 8000);
+
+            }
+            if (!konamiCode.indexOf(secretCode)) return;
+            secretCode = ("" + e.keyCode);
+
+        });
+
+    }
+
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+    });
+timeWarp();
+
+
+});
+
+
+
+        </script>
+    </body>
+</html>
