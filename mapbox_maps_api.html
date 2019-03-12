@@ -54,8 +54,7 @@
             marker.setLngLat(data);
             marker.addTo(map);
 
-            var hopPopup = new mapboxgl.Popup()
-                .setHTML("<h2>" + restaurant.name + "</h2>" + "<h3>" + restaurant.address + "</h3>" + "<h4>" + restaurant.phone + "</h4>" + "<h5>" + restaurant.type + "</h5>" );
+            var hopPopup = new mapboxgl.Popup().setHTML("<h2>" + restaurant.name + "</h2>" + "<h3>" + restaurant.address + "</h3>" + "<h4>" + restaurant.phone + "</h4>" + "<h5>" + restaurant.type + "</h5>" );
             marker.setPopup(hopPopup)
         });
 
