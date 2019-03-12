@@ -68,12 +68,22 @@ function capitalizeName(str) {
 
 
 /** get last name to capital **/
-function capitalizeAllNames(str) {
-    // str = str.join(' ');
-    for (var i = 0; i < str.length; i++) {
-        str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
-    }
-    return str;
+// function capitalizeAllNames(str) {
+//     // str = str.join(' ');
+//     for (var i = 0; i < str.length; i++) {
+//         str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+//     }
+//     return str;
+// }
+
+/** answer **/
+function capitalizeAllNames(arr){
+    var output = []
+
+    arr.forEach(function(fullName){
+        output.push(capitalizeName(fullName));
+    });
+    return output;
 }
 
 
@@ -85,8 +95,7 @@ function countVowels(str1){
     var vowel_list = 'aeiouAEIOU';
     var vcount = 0;
     for(var i = 0; i < str1.length ; i++)
-    {
-        if (vowel_list.indexOf(str1[i]) !== -1)
+    {if (vowel_list.indexOf(str1[i]) !== -1)
         {
             vcount += 1;
         }
@@ -101,16 +110,24 @@ var workers = [
 
 ];
 
-function averageSales(workers){
-    var sum = workers[0].sales + workers[1].sales + workers[2].sales;
-    var average = sum / 3;
-    for(var i = 0; 1 < workers.length; i++){
+// function averageSales(workers){
+//     var sum = workers[0].sales + workers[1].sales + workers[2].sales;
+//     var average = sum / 3;
+//     for(var i = 0; 1 < workers.length; i++){
+//
+//         return average;
+//
+//     }
+// }
 
-        return average;
-
-    }
+/** answer **/
+function averageSales(reps){
+    var total = 0;
+    reps.forEach(function(rep){
+        total += rep.sales;
+    });
+    return total/ reps.length
 }
-
 
 function analyzeWord(input){
     var output = {
@@ -121,11 +138,21 @@ function analyzeWord(input){
     return output
 }
 
-var words = ["html", "css", "javascript"];
-function analyzeAllWords(words){
-    for(var i = 0; i < words.length; i++){
+// var words = ["html", "css", "javascript"];
+// function analyzeAllWords(words){
+//     for(var i = 0; i < words.length; i++){
+//
+//     }
+// }
 
-    }
+/** answer **/
+function analyzeAllWords(arrOfStrings){
+    var output = [];
+    arrOfStrings.forEach(function(str){
+        output.push(analyzeWord(str));
+
+    });
+    return output;
 }
 
 function padArray(array, length, fill) {
