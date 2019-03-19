@@ -1,12 +1,14 @@
 "use strict";
 
 /** import **/
-import {niceMessage} from "./say-hello.js"
+// import {niceMessage} from "./say-hello.js"
+// console.log(niceMessage());
 
-console.log(niceMessage());
+/**import with default **/
+// import message from "./say-hello.js"
+// console.log(message.niceMessage1());
 
 
-
-
-// const messageTwo = require("./say-hello.js");
-// console.log(messageTwo());
+/** require **/
+const message = require("./say-hello.js");
+console.log(message());

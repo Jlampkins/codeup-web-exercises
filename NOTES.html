@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .lorem {
+            background-color: #3B94D9;
+        }
+    </style>
+</head>
+
+<h1 id="main-heading">THIS IS THE HEADING</h1>
+<h3 class="heading" id="sub-heading"> This is sub heading</h3>
+
+<p class="lorem" id="sub"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id incidunt nostrum quas quis voluptate. Cumque dolores esse exercitationem fuga ipsam ipsum minus odit, optio perferendis quae quaerat ratione sapiente soluta. Dicta distinctio hic mollitia natus neque quaerat quam <span id="word">Exception</span> qui tempora vero voluptate! Architecto consectetur dolore ducimus eligendi, enim explicabo magni quae qui recusandae repudiandae sed temporibus totam unde ut, voluptatem.<button id="one" type="submit">Button 1</button></p>
+
+<p class="lorem"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id incidunt nostrum quas quis voluptate. Cumque dolores esse exercitationem fuga ipsam ipsum minus odit, optio perferendis quae quaerat ratione sapiente soluta. Dicta distinctio hic mollitia natus neque quaerat quam qui tempora vero voluptate! Architecto consectetur dolore ducimus eligendi, enim explicabo magni quae qui recusandae repudiandae sed temporibus totam unde ut, voluptatem.</p>
+
+<p class="lorem"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id incidunt nostrum quas quis voluptate. Cumque dolores esse exercitationem fuga ipsam ipsum minus odit, optio perferendis quae quaerat ratione sapiente soluta. Dicta distinctio hic mollitia natus neque quaerat quam qui tempora vero voluptate! Architecto consectetur dolore ducimus eligendi, enim explicabo magni quae qui recusandae repudiandae sed temporibus totam unde ut, voluptatem.</p>
+
+<p> HELLO! I AM A DIFFERENT PARAGRAPH BUT I STILL SHOW UP!</p>
+<button id="submit">SEND</button>
+
+<button id="two" type="submit">Button 1</button>
+
+<form name="login">
+    <div>
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text">
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password">
+    </div>
+    <div>
+        <input type="submit">
+    </div>
+</form>
+
+
+<ul>
+    <li data-dbid="123">Item one</li>
+    <li data-dbid="234">Item two</li>
+</ul>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="js/keys.js"></script>
+<script src="js/promises.js" type="module"></script>
+
+<!--<script src="js/es6.js"> </script>-->
+<script>
+
+    "use strict";
+
+
+
+    // const hello = () => {
+    //     console.log("hello world");
+    // };
+    // hello();
+
+
+
+
+
+    // fetch('https://api.github.com/jlampkins')
+    //     .then(response => console.log(response))
+    //     .catch(error => console.error(error));
+
+
+    // const myPromise = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         let num = Math.random();
+    //         if (num > 0.5) {
+    //             resolve(`your number is ${num} dumbass`);
+    //         } else {
+    //             reject(`hey stupid your number is ${num}`);
+    //         }
+    //     }, 1500);
+    // })
+    // .then((garbage) => console.log(`resolved! ${garbage}`))
+    // .catch((garbage) => console.log(`rejected! ${garbage}`));
+    //
+    //
+    //
+    // console.log(myPromise); // a pending promise
+
+
+
+
+
+
+
+
+        // .flat -- turns array into strings
+        // .set -- takes unique values and makes a list object
+        //new set
+    // .from -- creates an array from an object
+    // .add is like push but for sets
+
+
+// /** reduce **/
+// const lyrics = ["we", "all", "live", "in", "a", "yellow", "submarine"];
+// const oneLine = lyrics.reduce((previous, current) => `${previous} ${current}`);
+//     console.log(oneLine);
+//
+//
+//     const reduceNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const sum = reduceNumbers.reduce((total, currentNumber) => total + currentNumber, 5);
+//     console.log(sum); //returns 60
+//
+// /**reduce with object **/
+//     const salesPeople = [
+//         {name: 'Jim Halpert', sales: 100},
+//         {name: 'Dwight Schrute', sales: 50},
+//         {name: 'Andy Bernard', sales: 150},
+//     ];
+//     const totalSales = salesPeople.reduce((total, person) => total + person.sales, 0);
+//     console.log(totalSales);
+//
+//     const colors = ["red", "orange", "red", "blue", "blue", "green", "red"];
+//     function countColors(array){
+//         const colorCountObj = array.reduce((totalColors, color) => {
+//             if(typeof totalColors[color] === "undefined"){
+//                 totalColors[color] = 1
+//             }else {
+//                 totalColors[color] += 1
+//             }
+//             return totalColors;
+//         }, {});
+//         return colorCountObj
+//     }
+//
+//     console.log(countColors(colors));
+//
+//     /** filter **/
+//
+//     const binary = [1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0];
+//     const isZero = binary.filter(n => n == false);
+//     const isOne = binary.filter(n => n == true);
+//
+//     console.log(isZero);
+//     console.log(isOne);
+//
+//     const oddNumbers = numbers.filter(function(n){
+//         return n % 2 !==0
+//     });
+//
+//     const oddNumbers = number.filter(n => n % 2 !==0);
+//
+//     console.log(oddNumbers);
+
+
+    /** map **/
+    // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    // const newNumbers = numbers.map((n, i)  => n + i);
+    // console.log(newNumbers);
+
+
+    // const numbers = [1, 2, 3, 4, 5];
+// const newNumbers = numbers.map(function(n){
+//     return n + 1
+//     });
+//     console.log(newNumbers);
+
+    /** es6 **/
+    // const newNumbers = numbers.map(n => n + 1);
+    //
+    // console.log(newNumbers);
+
+    // function laugh(num) {
+    //     for (var x = 0; num; x ++) {
+    //         return "I've loopep" + i;
+    //     }
+    // }
+
+// function loop(){
+//     for(var i = 0; i <=10; i++)
+//         return ("loop counter is on #" + i);
+// }
+//
+//     console.log(loop());
+
+    // let student = [{
+    //     name: "Daniel",
+    //     school: "Codeup",
+    //     cohort: "Zion"
+    // }];
+
+
+    // for(let something of student){
+    //     console.log(something.name);
+    // }
+
+    // student.forEach(function(individual){
+    //     console.log(individual.name);
+    // });
+
+    /** for of needs a list to go through **/
+
+    // let animals = ["monkey", "dog", "cat", "lizard", "mouse"];
+    // for (let i = 0; i<animals.length; i++){
+    //     console.log(animals[i]);
+    // }
+    //
+    // animals.forEach(function(animal, index, array){
+    //     console.log(animal);
+    //     console.log(index);
+    // });
+    //
+    // for(let animal of animals){
+    //     console.log(animal);
+    //     console.log(animals.indexOf(animal));
+    // }
+    //
+    //
+    // const name = "James";
+    // console.log(`Hello, ${name}!`);
+
+
+
+
+
+    // function power(base, exponent){
+    //     let product = 1;
+    //     for(let i = 0; i<exponent;i++){
+    //         product *=base;
+    //         console.log(i);
+    //     }
+    //
+    //     return product;
+    // }
+    //
+    // power(4,5);
+
+    /** ARROW FUNCTION **/
+    // let power = (base, exponent) => {
+    //     let product = 1;
+    //     for (let i = 0; i < exponent; i++) {
+    //         product *= base;
+    //
+    //     }
+    //     return product
+    // };
+    //
+    // power(4, 5);
+
+       /** same as this **/
+    // let power = function(base, exponent){
+    //     let product = 1;
+    //     for(let i = 0; i<exponent;i++){
+    //         product *=base;
+    //         console.log(i);
+    //     }
+    //
+    //     return product;
+    // };
+
+
+// function fuzzBuzz(num) {
+//     for (var i = 1; i < num; i++) {
+//         if (i % 15 === 0) console.log("FizzBuzz");
+//         else if (i % 3 === 0) console.log("Fizz");
+//         else if (i % 5 === 0) console.log("Buzz");
+//         else console.log(i);
+//     }
+// }
+//
+//     fuzzBuzz(random());
+
+
+function random() {
+    return Math.floor(Math.random() * (101 - 50)) + 50;
+}
+
+
+    /** Bonus 2 **/
+    var dogs = [
+        {
+            name: "Chompers",
+            breed: "Pug",
+            age: 7
+        },
+        {
+            name: "Freddy",
+            breed: "Lab",
+            age: 4
+        },
+        {
+            name: "Mr. Pig",
+            breed: "Mastif",
+            age: 10
+        }
+    ];
+
+function getOlder(dogs){
+    dogs.forEach(function(dog){
+        dog.age = dog.age + 1;
+    });
+    return(dogs);
+}
+    console.log(getOlder(dogs));
+
+/** Car Bonus #3 **/
+    var cars = [
+        {
+            make: 'Volvo',
+            color: 'red',
+            year: 1996,
+            isDirty: true
+        },
+        {
+            make: 'Toyota',
+            color: 'black',
+            year: 2004,
+            isDirty: false
+        },
+        {
+            make: 'Ford',
+            color: 'white',
+            year: 2007,
+            isDirty: true
+        }
+    ];
+
+    function washCars(cars) {
+        cars.forEach(function (car) {
+            car.isDirty = false;
+        });
+        return(cars);
+    }
+
+    console.log(washCars(cars));
+
+
+    /** Bonus #1 Filtered Numbers **/
+    /** Write a function, filterNumbers() that takes in an array
+     of mixed data types and returns an array of only the number
+     type in ascending order.**/
+
+    // input = input.sort();
+    //
+    // function filteredNumbers(input) {
+    //     var filtered = input.filter(function (item) {
+    //             return (parseInt(item) == item);
+    //
+    //     });
+    //     console.log(filtered);
+    // }
+    //
+    // filteredNumbers(input);
+
+    var input = ["fred", true, 5, 1, 3, "4", NaN ];
+    function filteredNumbers(array) {
+        var output = [];
+        for (var i = 0; i < array.length; i++) {
+            if(typeof array[i] === "number" && !(isNaN(array[i]))) {
+                output.push(array[i]);
+            }
+        }
+        output.sort();
+        return output;
+    }
+
+    console.log(filteredNumbers(input));
+
+
+    var users = [
+        {
+            isAdmin: true,
+            email: 'user1@email.com'
+        },
+        {
+            isAdmin: true,
+            email: 'user2@email.com'
+        },
+        {
+            isAdmin: false,
+            email: 'user3@email.com'
+        }
+    ];
+
+
+    /** bonus #4 adminList **/
+    // function adminList(users) {
+    //     var count = 0;
+    //     for (var i = 0; i < users.length; i++) {
+    //         if (users[i].isAdmin === true) {
+    //             count++;
+    //         }
+    //     } return count;
+    // }
+    //
+    // console.log(adminList(users));
+
+
+    /** bonus #4 adminList recfactor 1 **/
+    // function adminList(users) {
+    //     for (var i = 0; i < users.length; i++) {
+    //         if (users[i].isAdmin === true) {
+    //             console.log(users[i].email);
+    //         }
+    //     }
+    // }
+    // adminList(users);
+
+
+
+    /** Bonus #4 adminList refactor 2 **/
+    // function adminList(users) {
+    //     for (var i = 0; i < users.length; i++) {
+    //         if (users[i].isAdmin === true) {
+    //             console.log(users[i]);
+    //         }
+    //     }
+    // }
+    // adminList(users);
+
+
+    // var i = 0;
+    // while(i <= 10){
+    //     console.log(i);
+    //     i++;
+    // }
+
+    // for(var i = 0; i <= 10; i++){
+    //     console.log(i)
+    // }
+
+
+    // var band = {};
+    // band.genre = "Metal";
+    // band.shred = function(){
+    //     console.log("RAAAA");
+    // };
+    //
+    // band.shred();
+
+    // var array = ['John', 'Paul', 'George', 'Ringo', 'Santana'];
+    // console.log(array[2]);
+    // console.log(array[array.length - 2]);
+    // console.log(array[array.length - 3]);
+
+
+    // var listItem = document.getElementsByTagName("li");
+    // var listItem1 = listItem[0];
+    // var listItemClick = function(event){
+    //     console.log(listItem1.innerText);
+    // };
+    //
+    // listItem1.addEventListener("click", listItemClick, false);
+
+    // var button1 = document.getElementById("one");
+    // var button2 = document.getElementById("two");
+    // var paragraph = document.getElementById("sub");
+    // var span = document.getElementById("word");
+    //
+    // var buttonClick = function(event){
+    //     alert("You pushed the button");
+    // };
+    //
+    // var removeButton1 = function(event){
+    //     button1.removeEventListener("click", buttonClick, false); //function to remove
+    //     alert("REMOVAL COMPLETE");
+    // };
+    //
+    // var paragraphClick = function(event){
+    //     alert("You clicked the paragraph");
+    // };
+    // var spanClick = function(event){
+    //     alert("You clicked the span");
+    // };
+    //
+    //
+    // button1.addEventListener("click", buttonClick, false);
+    // button2.addEventListener("click", removeButton1, false);
+    // // paragraph.addEventListener("click", paragraphClick, false);
+    // span.addEventListener("click", spanClick, false);
+    //
+    //
+    // var popUp = function(event){
+    //     alert("You clicked the heading!")
+    // };
+    // var heading = document.getElementById("main-header");
+    // heading.addEventListener("click", popUp, false);
+    // //three parameters. Type = type of listener.  Listener = function. useCapture = defaults to false. If true, looks for any parent elements and displays the parent first.
+
+
+
+
+
+
+
+
+
+
+    // var bodyElement = document.getElementsByTagName("body")[0];
+    // bodyElement.style["background-color"] = "yellow";
+    //
+    // (function() {
+    //     // Get the main heading h1 by id
+    //     var listItems = document.getElementsByTagName('li');
+    //
+    //     for (var i = 0; i < listItems.length; i++) {
+    //         var dbId = listItems[i].getAttribute("data-dbid");
+    //         console.log(dbId);
+    //     }
+    //     // Prints
+    //     // 123
+    //     // 234
+    // })();
+
+
+
+
+//     var lorem = document.getElementsByTagName('p');
+//     lorem[0].removeAttribute("class");
+//
+//
+//     /** .hasAttribute & .setAttribute **/
+//     var mainHeading = document.getElementById("main-heading");
+//     mainHeading.setAttribute("class", "lorem"); //gives the main-heading the same attribute as the lorem
+//
+//     console.log(mainHeading.hasAttribute("class"));
+//
+// /** modifying inner HTML **/
+//
+//     var mainHeading = document.getElementById("main-heading");
+//     console.log(mainHeading.innerHTML);
+//     //.innertext instead of .innerHTML will keep the website from being changed in console.
+//     mainHeading.innerHTML = "Hello, World";
+//     console.log(mainHeading.innerHTML);
+
+
+    // (function() {
+    //     // get the "username" input
+    //     var usernameInput = document.forms.login.username;
+    //     //document.forms.login.username is looking for the NAME attribute.
+    //
+    //     // log the value of the "username" input
+    //     console.log(usernameInput.value); //logging the value of the input within the targeted input
+    //
+    // })();
+
+
+    // var submitButton = document.getElementById("submit");
+    // console.log(submitButton);
+    //
+    // var allHeadings = document.getElementsByClassName('heading');
+    // console.log(allHeadings);
+    //
+    // var lorem = document.getElementsByTagName("p");
+    // console.log(lorem);
+    //
+    // console.log(allHeadings[0]); //shows just the element
+
+
+
+
+
+    /** set interval **/
+// setInterval(function (){console.log("Hello")}, 2000);
+
+    // this code will produce a console log every second
+    // when count >= max, the interval is cancelled, and the logging will stop
+
+    // var count = 0;
+    // var max = 10;
+    // var interval = 1000; // interval time in milliseconds
+    //
+    // var intervalId = setInterval(function () {
+    //     if (count >= max) {
+    //         clearInterval(intervalId);
+    //         console.log('All done');
+    //     } else {
+    //         count++;
+    //         console.log('Repeating this line ' + count);
+    //     }
+    // }, interval);
+
+
+
+
+/** window location **/
+/** how to redirect to another page **/
+//     var start = 0;
+//     var end = 10;
+//     function logTen(){
+//         if(start >= end){
+//             window.location = "https://www.google.com";
+//             clearInterval(newInterval)
+//         }else {
+//             console.log("repeating this line" + start);
+//             start++;
+//         }
+//     }
+//
+//     var newInterval = setInterval(logTen, 1000);
+//
+// /** setTimeout does it's thing once **/
+//     // var delay = 3000;
+//     setTimeout(function(){alert("You did it!")}, delay);
+//
+//
+// /** setInterval & clearInterval **/
+//         var start = 0;
+//         var end = 10;
+//         function logTen(){
+//             if(start >= end){
+//                 console.log("All Done");
+//                 clearInterval(newInterval)
+//             }else {
+//                 console.log("test");
+//                 start++;
+//             }
+//         }
+//
+//         var newInterval = setInterval(logTen, 1000);
+
+
+    // var seconds = 2000;
+    // var intervalID = setInterval(function(){console.log("Hello"})
+    // function logOut(){
+    //     console.log("You have been signed out");
+    // }
+    // var newInterval = setInterval(logOut, 2000);
+    // //setInterval returns an intervalID -- assigning a variable allows us to grab that interval.
+    //
+    // Math.floor(Math.random()*20 + 1);
+//gives a random number between 1 and 21
+
+
+
+// var holidays = ["New Year", "Halloween", "Birthday", "Halloween"];
+//
+//
+//
+//
+// /** indexOf **/
+// /** Provides position in an array**/
+//     holiday.indexOf("Birthday");
+//
+//     /** lastIndexOf **/
+//     /** finds the last index of a duplicated item **/
+//     holiday.lastIndexOf("Halloween");
+//
+//             /**pop**/
+// /** removes the end item of an array**/
+//     holiday.pop();
+//
+//             /** push **/
+//  /** add to the end of the array **/
+//     holidays[20] = "new item"; /**-- adds new item to the 20 index **/
+//     holidays.push("Valentine's");
+//
+//             /** unshift **/
+//  /** add to the beginning of an array**/
+//     holidays.unshift();
+//
+//             /** shift **/
+//     /** gets rid of the beginning of an array**/
+//     holiday.shift();
+
+
+
+    /** For loop to break**/
+/** For Loops to iterate through an array**/
+    // var dogs = ["boxer", "husky", "bulldog", "corgi"];
+
+    // for(var i = 0; i < dogs.length; i++){
+    //     console.log("I have a " + dogs[i])
+    // }
+    //
+    // dogs.forEach(function(element, index, array){
+    //     console.log(element + " " + index + array);
+        //first logs out the element
+        //second logs index
+        //third logs the array
+    // });
+
+
+    /** loop inside a function*/
+    /** cube all odd numbers of 1 through 50**/
+    // function cubed(x){
+    //     for(var a = 1; a<= x; a++){
+    //         if(a % 2 === 0){
+    //             continue;
+    //         }
+    //         console.log("The cube of " + a + " is " + a*a*a);
+    //     }
+    // }
+    // cubed(50);
+
+
+
+    /**once you reach the random number; stop the loop (using break)**/
+    // var randomNumber = Math.floor(Math.random() * 25) + 1;
+    // console.log(randomNumber);
+    // for(var e = 1; e <=25; e++){
+    //     console.log(e);
+    //     if(e === randomNumber){
+    //         console.log("The number is " + e);
+    //         break;
+    //     }
+    // }
+    //
+    /**use continue for things that you do not want to show up (when you want to skip things
+    // and continue with the loop.**/
+    // for(var f = 1; f<=25; f++){
+    //     if (f % 2 === 0){
+    //         //number isn't even
+    //         //odd numbers aren't as cool
+    //         //skp the rest of the loop and continue with the next item
+    //         continue;
+    //     }
+    //     console.log("Here is a lovely odd number: " + f);
+    // }
+
+    /** logs numbers 1-50 but backwards.**/
+    /** - Refactor with a for loop**/
+    // for(var d = 50; 0 < d; d--){
+    //     console.log(d);
+    // }
+    /** refactor with do/while**/
+    // var d = 50;
+    // - Refactor with a do while loop
+    // do {
+    //     console.log(d);
+    //     d--;
+    // }while(0 < d);
+    /**refactor with while**/
+    // while(0 < d){
+    //     console.log(d);
+    //     d--;
+    // }
+
+/**using For Loop**/
+    //log down all numbers from 1 - 100
+    //if divisible by 3 log fizz
+    //if divisible by 5 log buzz
+    //if divisible by both log fizzbuzz
+    //else log number
+
+    // for(var i = 1; i < 101; i++) {
+    //     if (i % 15 === 0) console.log(FizzBuzz);
+    //     else if (i % 5 === 0) console.log(Buzz);
+    //     else if (i % 3 === 0) console.log(Fizz);
+    //     else console.log(i);
+    // }
+    //
+    //
+    // var z = 1;
+    // do {
+    //     if(z % 5 === 0 && z % 3 === 0){
+    //         console.log("FizzBuzz");
+    // }else if(z % 5 === 0){
+    //     console.log("Buzz");
+    // }else if (z % 3 === 0){
+    //         console.log("Fizz");
+    // } else {
+    //     console.log(z);}
+    //     z++;
+    // }while(z <= 100);
+
+
+// for(initialize; condition; change)
+//short had for do while
+
+//     for (var i = 0; i < 10; i++){
+//         console.log("for loop iteration #" + i);
+//     }
+//
+//     for(var d = 1; d <= 25; d++){
+//         console.log("The number is: " + d);
+//     }
+//     //use do while to log "the number is i" for all numbers 1 - 25
+// var b = 1;
+//     do {
+//         console.log("The number is: " + b);
+//         b++;
+//     }while(b <= 25);
+
+    //use do while count backwards by 10 from 100 until you reach -50
+// var c = 100;
+//     do {
+//         console.log(c);
+//         c -= 10;
+//     }while(c >= -50);
+//
+//
+//     var num = 10;
+//     do {
+//         console.log(num);
+//     }while(num < 10);
+
+
+    //log all even numbers from 1 - 50
+    // var x = 1;
+    // while(x <= 50){
+    //     if (x % 2 === 0){
+    //         console.log(x);
+    //     }
+    //     x++;
+    // }
+
+    //create a function that takes square of a number
+    // function square(x){
+    //     return x * x;
+    // }
+    //use function in a loop log squares from 1 - 10
+    // var x = 1;
+    // while(x <=10){
+    //     console.log("The square of " + x + " is " + square(x));
+    //     x++;
+    // }
+    // ex. ("The square of x is: ")
+
+
+
+  // function tellFortune(childNum, partName, geoLoc, job){
+  //      return "You will be a " + job + " in " + geoLoc + " and married to " + partName + " with " + childNum + " kids";
+  //
+  // }
+  // console.log(tellFortune(4, "Martha", "Alaska", "hobo"));
+
+
+  // var dogAge = prompt("How long has your dog been alive?");
+  // var totaldogYears;
+  //
+  // function calculateDogAge(dogAge) {
+  //     totaldogYears = dogAge * 7;
+  //     return totaldogYears
+  // }
+  //
+  // alert("Your dog is " + calculateDogAge(dogAge) + " years in dog years");
+
+
+
+
+
+
+    // var yes = confirm("True or False");
+    //
+    // var message = (yes) ? "you said yes" : "goodbye";
+    // console.log(message);
+    //
+    //
+    // if(yes){
+    //     console.log("You said yes!")
+    // } else {
+    //     console.log("You said no")
+    // }
+
+
+    // var response = prompt("true or false");
+    // (response === "t") ? alert("it is true") : alert("is it false");
+
+
+    // if(response === "t") {
+    //     alert("it is true");
+    // } else {
+    //     alert("it is false");
+    // }
+
+    // IF ELSE
+    // var userLearned = prompt("What have you learned?");
+    // var answer;
+    //
+    // if(userLearned === "html"){
+    //     answer = "Hyper Text Markup Language";
+    // } else if(userLearned === "css") {
+    //     answer = "Cascading Style Sheets";
+    // }else if(userLeanred === "js"){
+    //     answer ="Javascript"
+    // }else {
+    //     answer = "what is " + userLearned + "?"
+    // }
+    // alert(answer);
+
+//SWITCH CASES
+//     var userLearned = prompt("What have you learned?").toLowerCase();
+//     var answer;
+//     switch(userLearned) {
+//         case "html":
+//             answer = "Hyper Text Markup Language";
+//             break;
+//         case "css":
+//             answer = "Cascading Style Sheets";
+//             break;
+//         case "js":
+//             answer = "Javascript";
+//             break;
+//         default:
+//             answer = "Does not compute";
+//             break;
+//     }
+//     alert(answer);
+
+    //Switch Case in a Function
+    // var a = 4;
+    // var b = 6;
+    // var solution;
+    // var mathstuff = prompt("What would you like to do?");
+    //
+    // function mathThings(x, y) {
+    //     switch(mathstuff) {
+    //         case "Add":
+    //             solution = x + y;
+    //             break;
+    //         case "Subtract":
+    //             solution = x - y;
+    //             break;
+    //         case "multiply":
+    //             solution = x * y;
+    //             break;
+    //         case "divide":
+    //             solution = x / y;
+    //             break;
+    //
+    //     }
+    //     return solution;
+    // }
+    // alert(mathThings(a, b));
+
+</script>
+
+
+</body>
+</html>
